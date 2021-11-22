@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name = "viewport" content="with=device-width, initial-scale=1.0">
+    <title>Meerut Institute of Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" herf="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+      <nav>
+         <a href="index.html"><img src="images/logo1.png"></a>
+         <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="login.html">ACCOUNT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="courses.html">COURSES</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contacts.html">CONTACTS</a></li>
+         </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>About Us</h1>
+  </section>
+
+  <!-----about us content----->
+
+  <section class="about-us">
+   <div class="row">
+      <div class="about-col">
+         <h1>We are The Largest Institute of Meerut.</h1>
+         <p>The top of the page features a friendly image of the company's employees, and as you scroll, you will find their values, goals, journey, details about the founders, the team, and the culture. Along the way, webdew continues to share photos of its executives and all other team members, completely humanizing its brand by putting various faces to its name.MIT Meerut has been preparing educators for over 100 years. The College of Education continues to improve education in our global society through a three-part mission: leadership, scholarship and service. </p>
+         <a href="https://mitmeerut.ac.in/gallerydetails/12" class="btn red-btn">EXPLORE NOW</a>
+      </div>
+      <div class="about-col">
+        <img src="images/blockb.png">
+    </div>
+   </div>
+</section>
+ <section class="about-us">
+   <div class="row">
+      <div class="about-col">
+         <h1>Why Choose MIT Meerut ?</h1>
+         <p>Innovative teacher education programs, outstanding faculty, relationships with practicing educators and strong research opportunities make meerut institute of technology a dynamic place for learning to teach and to contribute to the fields of education and kinesiology. The college is proud to claim more than 58,000 alumni,<br>each touching lives in their own way around the world.
+         </p>
+            <p>MIT Meerut has been preparing educators for over 10years. The College of Education continues to improve education in our global society through a three-part mission: leadership, scholarship and service.</p>
+         <a href="https://mitmeerut.ac.in/Placements" class="btn red-btn">KNOW MORE</a>
+      </div>
+      <div class="about-col">
+        <img src="images/blockaview.png">
+    </div>
+   </div>
+</section>
+<!-----Footer----->
+
+      <section class="footer">
+         <h4>About Us</h4>
+         <p>Made By: Abhinav Rai & Utkarsh Kushwaha</p>
+         <div class="icon">
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+               <a href="https://www.facebook.com/mit2007" class="fa fa-facebook" class="fa fa-facebook"></a>
+               <a href="https://twitter.com/meerutmit?lang=en" class="fa fa-twitter"></a>
+               <a href="https://www.instagram.com/mit_meerut" class="fa fa-instagram"></a>
+               <a href="https://in.linkedin.com/company/mitmeerut" class="fa fa-linkedin"></a>
+                <a href="https://www.youtube.com/channel/UCkoMkDAf-tTk23C9bGjLdrA" class="fa fa-youtube"></a>
+            </div>
+            <p>Made With <i href="#" class="fa fa-heart-o"></i> By Coding Developers</p>
+      </section>
+
+    <!--------javascript for toggle menu----->
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+       function showMenu(){
+         navLinks.style.right = "0";
+      }
+       function hideMenu(){
+         navLinks.style.right = "-200px";
+      }
+
+ </script>     
+</body>
+</html>
