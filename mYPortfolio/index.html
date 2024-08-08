@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/8a415f5fb4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav>
+				<img src="Images/logo.png" class="logo">
+				<ul id="sidemenu">
+				<li><a href="#header">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#contact">Contacts</a></li>
+				<i class="fa-solid fa-times" onclick="closemenu()"></i>
+			</ul>
+			<i class="fa-solid fa-bars" onclick="openmenu()"></i>
+			</nav>
+			<div class="header-text">
+				<p>UI/UX Designer</p>
+				<h1>Hi, I'm <span>Abhinav</span><br> Rai From Varanasi</h1>
+			</div>
+		</div>
+	</div>
+	<!-- --------------------About -->
+	<div id="about">
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="Images/user.png">
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>I'm Abhinav Rai, a recent Computer Science Engineering graduate passionate about web development. With a BTech degree and 71% score, I'm currently mastering the MEAN stack at Ducat, Noida. I'm enthusiastic about creating dynamic web applications and eager to contribute my skills to innovative projects. Let's connect and collaborate to build exceptional digital experiences!</p>
+
+					<div class="tab-titles">
+						<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+						<p class="tab-links"onclick="opentab('experience')">Experience</p>
+						<p class="tab-links"onclick="opentab('education')">Education</p>
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+							<li><span>Full Stack</span><br>Designing Dynamic Web pages</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="experience">
+						<ul>
+							<li><span>2024-Current</span><br>UI/UX; Mearn Stack Training at Ducat,Noida;
+							News App using React and Api</li>
+							<li><span>2019-2023</span><br>College Website Project at College; Pursuing Btech (CSE) from Meerut Institute of Technology</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="education">
+						<ul>
+							<li><span>2019-23</span><br>Pursuing Btech(CSE)</li>
+							<li><span>2023-24</span><br>Learning(MEARN Stack) from Ducat,Noida</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Services -->
+	<div id="services">
+		<div class="container">
+			<h1 class="sub-title">My Services</h1>
+			<div class="services-list">
+				<div>
+					<i class="fa-solid fa-code"></i>
+					<h2>Web Design</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					</p>
+					<a href="#">Learn more</a>
+				</div>
+				<div>
+					<i class="fa-solid fa-crop"></i>
+					<h2>UI/UX Design</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					</p>
+					<a href="#">Learn more</a>
+				</div>
+				<div>
+					<i class="fa-solid fa-file-code"></i>
+					<h2>Full Stack</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					</p>
+					<a href="#">Learn more</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Portfolio -->
+
+	<div id="portfolio">
+		<div class="container">
+			<h1 class="sub-title">My work</h1>
+			<div class="work-list">
+				<div class="work">
+					<img src="Images/work-1.png">
+					<div class="layer">
+						<h3>College Website</h3>
+						<p>The website is for the project pourpose in which you can interact with the UI to know about college and it's facility.</p>
+						<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="Images/work-2.png">
+					<div class="layer">
+						<h3>News App</h3>
+						<p>The website is for the project pourpose in which you can interact with the UI to know about college and it's facility.</p>
+						<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="Images/work-3.png">
+					<div class="layer">
+						<h3>E-commerce</h3>
+						<p>The website is for the project pourpose in which you can interact with the UI to know about college and it's facility.</p>
+						<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="btn">See more</a>
+		</div>
+	</div>
+	<!-- Contact -->
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title">Contact Me</h1>
+					<p><i class="fa-solid fa-paper-plane"></i>abhinavrai2014@gmail.com</p>
+					<p><i class="fa-solid fa-phone-volume"></i>8303081170</p>
+					<div class="social-icons">
+						<a href="https://www.facebook.com/profile.php?id=100004812300652"><i class="fa-brands fa-facebook"></i></a>
+						<a href="https://github.com/Abhinavrai22"><i class="fa-brands fa-github"></i></a>
+						<a href="https://www.instagram.com/__abhinav_rai__/"><i class="fa-brands fa-instagram"></i></a>
+						<a href="https://www.linkedin.com/in/abhinav-rai-307401303/"><i class="fa-brands fa-linkedin"></i></a>
+					</div>
+					<a href="#" download class="btn btn2">Download CV</a>
+				</div>
+				<div class="contact-right">
+					<form name="submit-to-google-sheet">
+						<input type="text" name="Name" placeholder="Your Name" required>
+						<input type="email" name="Email" placeholder="Your Email" required>
+						<textarea name="Message" placeholder="Your Message" rows="6">
+					</textarea>
+					<button type="submit" class="btn btn2">
+						Submit
+					</button>
+					</form>
+					<span id="msg"></span>	
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>Copyright <i class="fa-solid fa-copyright"></i>Abhinav</p>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		var tablinks= document.getElementsByClassName('tab-links');
+		var tabcontents = document.getElementsByClassName('tab-contents');
+		function opentab(tabname) {
+			for(tablink of tablinks){
+				tablink.classList.remove("active-link");
+			}
+			for(tabcontent of tabcontents){
+				tabcontent.classList.remove("active-tab");
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab")
+		}
+	</script>
+
+	<script type="text/javascript">
+		var sidemenu = document.getElementById("sidemenu");
+		function openmenu(){
+			sidemenu.style.right ="0";
+		}
+		function closemenu(){
+			sidemenu.style.right ="-200px";
+		}
+
+	</script>
+	<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxXOgiLtaxK1fdeGtFy0zF2U-Prit9qf7QXRhFnIdf7wlTFWPI1KXIT0MPuKoFHRFbm/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {msg.innerHTML = "Message Sent Successfully"
+      	setTimeout(function(){
+      		msg.innerHTML = ""
+      	},5000)
+      	form.reset()
+  })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
