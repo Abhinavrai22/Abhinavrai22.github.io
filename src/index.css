@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.new-scroll::-webkit-scrollbar{
+  width: 1px !important;
+  height: 1px !important;
+  border-radius: 10px;
+}
+.hide-scroll::-webkit-scrollbar{
+  display: none;
+}
+
+@layer components {
+  .btn {
+    @apply bg-red-300 py-2 border border-transparent rounded-xl px-5 hover:box-border text-white hover:bg-white hover:border hover:border-red-300 hover:text-red-300 transition-all duration-200
+  }
+}
