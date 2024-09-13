@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'; // Add Navigate
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
@@ -21,11 +21,8 @@ export default function App() {
     <>
       <BrowserRouter>
         <Navbar changeLanguage={changeLanguage} changeSearch={changeSearch}></Navbar>
-        <Routes>
-          {/* Redirect root path "/" to the General section */}
-          <Route path="/" element={<Navigate to="/general" />} /> {/* Add this line */}
-          
-          <Route path="general" element={<Home q='General' lang={lang} search={search} />} />
+        <Routes>          
+          <Route path="/" element={<Home q='General' lang={lang} search={search} />} />
           <Route path="science" element={<Home q='Science' lang={lang} search={search} />} />
           <Route path="sports" element={<Home q='Sports' lang={lang} search={search} />} />
           <Route path="business" element={<Home q='Business' lang={lang} search={search} />} />
