@@ -1,0 +1,8 @@
+.backcolor{
+    background-color: #E79500;
+}
+.nav-link:hover{
+    color: white;
+    border-bottom: 1px solid white;
+    transition: 1s ease;
+}
