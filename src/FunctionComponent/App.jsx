@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'; // Add Navigate
 import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
+import NewsArticle from './NewsArticle';
 
 export default function App() {
   let [lang, setLanguage] = useState('hi');
-  let [search, setSearch] = useState("");
+  let [search, setSearch] = useState('');
 
   let changeLanguage = (data) => {
     setLanguage(data);
@@ -19,12 +20,11 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar changeLanguage={changeLanguage} changeSearch={changeSearch} />
+        <Navbar changeLanguage={changeLanguage} changeSearch={changeSearch}></Navbar>
         <Routes>
-          {/* Redirect root URL to 'general' */}
-          <Route path="/" element={<Navigate to="/general" />} />
-
-          {/* Define your routes */}
+          {/* Redirect root path "/" to the General section */}
+          <Route path="/" element={<Navigate to="/general" />} /> {/* Add this line */}
+          
           <Route path="general" element={<Home q='General' lang={lang} search={search} />} />
           <Route path="science" element={<Home q='Science' lang={lang} search={search} />} />
           <Route path="sports" element={<Home q='Sports' lang={lang} search={search} />} />
@@ -38,6 +38,7 @@ export default function App() {
           <Route path="weather" element={<Home q='Weather' lang={lang} search={search} />} />
           <Route path="jokes" element={<Home q='Jokes' lang={lang} search={search} />} />
         </Routes>
+        <NewsArticle />
         <Footer />
       </BrowserRouter>
     </>
