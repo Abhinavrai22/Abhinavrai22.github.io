@@ -18,7 +18,6 @@ export default function Navbar(props) {
       <div className="container-fluid">
         <Link className="navbar-brand text-light fw-semibold" to="/">NewsApp</Link>
 
-        {/* This button toggles the navbar on small screens */}
         <button 
           className="navbar-toggler" 
           type="button" 
