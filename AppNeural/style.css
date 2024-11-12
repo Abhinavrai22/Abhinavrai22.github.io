@@ -1,0 +1,443 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout Styling */
+body {
+  display: flex;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  flex-direction: column;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar button {
+  display: none;
+}
+
+.sidebar img {
+  height: 70px;
+  margin-left: 30px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.sidebar img {
+  border: 1px solid red;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  width: 100%;
+  text-decoration: none;
+}
+
+.sidebar ul li:hover {
+  color: white;
+  width: 50%;
+  background-color: red;
+  transition: 2s ease;
+}
+
+/* Content styling */
+.content {
+  margin-left: 250px;
+  /* Offset for the sidebar */
+  width: calc(100% - 250px);
+  /* Adjust for sidebar width */
+  display: flex;
+  flex-direction: column;
+  /* Stack sections in a column */
+  gap: 20px;
+}
+
+/* About Section with Full-Width Background Image */
+#about {
+  position: relative;
+  min-height: 100vh;
+  /* Make it full viewport height */
+  background-image: url(images/img.jpg);
+  /* Background image only for About section */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+/* Gray transparent overlay on About section */
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent gray overlay */
+  z-index: 0;
+  /* Ensure overlay is below text content */
+}
+
+/* About Section Content */
+#about .text-content,
+#about .image-content {
+  position: relative;
+  z-index: 1;
+  /* Ensure text and image are above overlay */
+  padding: 20px;
+  /* Add padding inside the content without affecting full width */
+  font-size: 24px;
+}
+
+/* Remove list decoration and increase font size in the About section */
+#about li {
+  list-style-type: none;
+  /* Removes bullet points */
+  font-size: 24px;
+  /* Adjust font size as needed */
+  margin-bottom: 8px;
+  /* Optional: adds space between items */
+}
+
+/* Typewriter effect styling */
+#typewriter-text {
+  text-align: center;
+}
+
+/* text which will change with effect */
+#dynamic-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  display: inline-block;
+  color: red;
+}
+
+/* cursor blink effect */
+.blinking-cursor {
+  display: inline-block;
+  width: 2px;
+  /* Adjust width as needed */
+  height: 24px;
+  /* Should match the font size */
+  background-color: white;
+  /* Cursor color */
+  animation: blink 2s ease infinite;
+  /* Blinking effect */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Other Sections Below the About Section */
+#skills,
+#projects,
+#contact {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  /* Add spacing between sections */
+}
+
+/* adjusting text according */
+#skills h2 {
+  color: red;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* removing list style */
+#skills li {
+  list-style-type: none;
+  font-size: 24px;
+}
+
+/* adjusting img */
+#skills img {
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/*For Project Section*/
+
+#projects {
+  border: 2px solid white;
+}
+
+/* adjusting text according */
+#projects h2 {
+  color: red;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* removing list style */
+#projects li {
+  list-style-type: none;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* adjusting img */
+#projects img {
+  height: 200px;
+}
+
+/* giving style */
+.proj1 {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+/* giving style */
+.proj3 {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+/* giving style */
+.proj1,
+.proj2,
+.proj3:hover {
+  cursor: pointer;
+}
+
+/* Modal overlay */
+#modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+#modalContent {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+/* Close button styling */
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Button styling inside the modal */
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.modal-button {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-button:hover {
+  background-color: #0056b3;
+}
+
+
+/*---For Contact Form---*/
+#contact h2 {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+}
+
+#contactForm {
+  box-sizing: border-box;
+  background-color: grey;
+  padding: 20px;
+  display: grid;
+}
+
+#contactForm input {
+  width: 50%;
+  height: 40px;
+}
+
+#message {
+  width: 50%;
+}
+
+#contact button {
+  width: 20%;
+  border-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+  background-color: green;
+  margin-top: 5px;
+  color: white;
+}
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "menuToggle title img";
+    align-items: center;
+  }
+
+  .sidebar ul li a {
+    color: #fff;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .sidebar ul li:hover {
+    color: white;
+    width: 100%;
+    background-color: red;
+    transition: 2s ease;
+  }
+
+  #menuToggle {
+    display: inline-block;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: auto;
+    grid-area: menuToggle;
+  }
+
+  .sidebar img {
+    height: 50px;
+    grid-area: img;
+    justify-self: end;
+    /* Aligns the image to the right */
+  }
+
+  .sidebar h2 {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    grid-area: title;
+    /* Center "My Portfolio" in the grid */
+  }
+
+  #menuItems {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* Show menu items when open */
+  .sidebar.open #menuItems {
+    display: flex;
+  }
+}
+
+/* Content styling */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* adjusting all project width and img size according to small screen */
+  #projects {
+    width: auto;
+  }
+
+  #projects img {
+    width: 250px;
+  }
+
+  #contactForm input {
+    width: 60%;
+    height: 30px;
+  }
+
+  #message {
+    width: 60%;
+  }
+
+  /* adjusting the button for small screen */
+  #contact button {
+    width: 40%;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background-color: green;
+    margin-top: 5px;
+    color: white;
+  }
+}
